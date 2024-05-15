@@ -1,0 +1,42 @@
+1 :- Arrays :
+Arrays ky andar ham nichy di gai in chizo ka lazmi pata hona chye :
+* forEach :
+forEach Array ky har aik value ky pass jata hai or os array mai changes kar ky hamy returm karta hai osi array ko.
+let arr = [1,2,3,4] ;
+
+arr.forEach((val)=>{
+    return console.log(val + 2) ;
+})
+* map() :
+map() bhi forEach ki tarha kam karta hai magr in dono mai major difference yahi hai ky map() ham aik new array returm karta hai previous array mai changes karny ky bad.
+* filter() :
+filter() ko ham array sy kuch values nikalny ky liye use karty hai ye kuch values di gai condition ky motabik nikaly ga or osy aik new array ki shakal mai return kary ga.
+let arr = [1,2,2,3,4,2] ;
+
+let newArr = arr.filter((val)=>{
+    if(val === 2 ) {return true} 
+    else {return false}
+})
+console.log(newArr)
+*indexOf() :
+indexOf ko hham kisi bhi value ka index find karny ky liye use karty hai.
+
+2 :- Objects : 
+everything in javascript is an object . agr hm chaty hai ky kisi object ki values change na ho to ham isko freeze bhi kar sakty hai.
+let obj = {
+    name : "Awais",
+    age : 18 
+}
+Object.freeze(obj)
+obj.name = "Usman";
+console.log(obj.name)
+
+*  jaisy mai ny kha ky har chiz object hai to javascript function bhi object hai is liye ham inki matlab functions ki bhi legth nikal sakty hai. Number of parameters is called legth of function.
+function abcd(a,b){
+
+}
+console.log(abcd.length)
+
+3 :- Async javascript :
+sync javascript ka matlab hai code line by line execute hoga.
+Async javascript ka matlab hai jo bhi code async natureka hoga osy ham side stack mai bhaij dy gy or jo baki ka code sync nature ka hoga wo sara execute hoga phr is ky bad async javascriptk ka code execute hoga. ham isko tab use karty hai jab data 3rd party sy a raha ho. q ky data ko aty aty dear bhi ho sakti hai is liye ham is mai await keyword use karty hai.
